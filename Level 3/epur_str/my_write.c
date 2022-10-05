@@ -2,12 +2,11 @@
 
 int	 main(int ac, char const **av)
 {
-	int i;
+	int i = 0;
 	int flg = 0;
 
 	if (ac == 2)
 	{
-		i = 0;
 		while (av[1][i] == ' ' || av[1][i] == '\t')
 			i++;
 		while (av[1][i])
