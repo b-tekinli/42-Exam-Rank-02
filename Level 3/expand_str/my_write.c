@@ -14,7 +14,7 @@ int main(int ac, char const **av)
         {
             if (av[1][i] == ' ' || av[1][i] == '\t')
                 flag = 1;
-            if (!(av[1][i] == ' ' || av[1][i] == '\t'))
+            else
             {
                 if (flag)
                     write(1, "   ", 3);
