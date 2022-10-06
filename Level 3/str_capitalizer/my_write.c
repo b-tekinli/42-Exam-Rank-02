@@ -19,17 +19,17 @@ void	str_cap(char *str)
 	}
 }
 
-int main(int argc, char *argv[])
+int main(int ac, char **av)
 {
 	int i = 1;
 
-	if (argc < 2)
+	if (ac < 2)
 		write(1, "\n", 1);
 	else
 	{
-		while (i < argc)
+		while (i < ac)
 		{
-			str_cap(argv[i]);
+			str_cap(av[i]);
 			write(1, "\n", 1);
 			i++;
 		}
