@@ -15,21 +15,17 @@ void    rstr_cap(char *str)
     }
 }
 
-int main(int ac, char **av)
-{
+int main(int ac, char **av) {
     int i;
 
-    if (ac == 1)
-        write(1, "\n", 1);
-    else
+    if (ac > 1)
     {
-        i = 1;
+       i = 1;
         while (i < ac)
         {
-            rstr_cap(av[i]);
-            write(1, "\n", 1);
+            rstr_cap(av[1]);
             i++;
-        }
+        }  
     }
-    return (0);
+    write(1, "\n", 1);
 }
