@@ -28,7 +28,7 @@ int main(int ac, char **av)
         {
             rstr_cap(av[i]);
             write(1, "\n", 1);
-            i += 1;
+            i++;
         }
     }
     return (0);
