@@ -17,19 +17,19 @@ void    rstr_cap(char *str)
 
 int main(int ac, char **av)
 {
-    int i;
+    int i = 1;
 
-    if (ac == 1)
-        write(1, "\n", 1);
-    else
-    {
-        i = 1;
+    if (ac >= 2) {
         while (i < ac)
         {
             rstr_cap(av[i]);
             write(1, "\n", 1);
-            i += 1;
+            i++;
         }
+    }
+    else
+    {
+        write(1, "\n", 1);
     }
     return (0);
 }
