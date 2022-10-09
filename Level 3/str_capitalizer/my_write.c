@@ -27,13 +27,14 @@ void str_cap(char *str) {
 int main(int ac, char **av) {
     int i = 1;
 
-    if(ac >= 2)
+    if(ac >= 2) {
         while (i < ac)
         {
             str_cap(av[1]);
             write(1, "\n", 1);
             i++;
         }
+    }
     else {
         write(1, "\n", 1);
     }
