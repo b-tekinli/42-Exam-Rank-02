@@ -30,7 +30,7 @@ int main(int ac, char **av) {
     if(ac >= 2) {
         while (i < ac)
         {
-            str_cap(av[1]);
+            str_cap(av[i]);
             write(1, "\n", 1);
             i++;
         }
