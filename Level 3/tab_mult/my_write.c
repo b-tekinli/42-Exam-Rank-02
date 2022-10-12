@@ -1,11 +1,11 @@
 #include <unistd.h>
 
 int ft_atoi(char *str) {
-    int i = 0;
     int n = 1;
     int result = 0;
+    int i = 0;
 
-    if (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+    while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
     {
         i++;
     }
@@ -13,7 +13,7 @@ int ft_atoi(char *str) {
     {
         if (str[i] == '-')
         {
-            n = -1;
+            n = 0;
         }
         i++;
     }
@@ -49,16 +49,16 @@ void ft_putnbr(int n) {
     }
 }
 
-void print_table(int n) {
+void tab_mult(int num) {
     int i = 1;
 
     while (i <= 9)
     {
         ft_putnbr(i);
         write(1, " x ", 3);
-        ft_putnbr(n);
+        ft_putnbr(num);
         write(1, " = ", 3);
-        ft_putnbr(i * n);
+        ft_putnbr(num * i);
         write(1, "\n", 1);
         i++;
     }
@@ -67,9 +67,10 @@ void print_table(int n) {
 int main(int ac, char **av) {
     if (ac == 2)
     {
-        print_table(ft_atoi(av[1]));
+        tab_mult(ft_atoi(av[1]));
     }
-    else {
+    else
+    {
         write(1, "\n", 1);
     }
     return (0);
