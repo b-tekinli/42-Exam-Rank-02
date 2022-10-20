@@ -2,13 +2,11 @@
 
 char	**ft_split(char *str)
 {
-	int i;
-	int i2;
+	int i = 0;
+	int i2 = 0;
 	int i3;
 	char **tab;
 
-	i = 0;
-	i2 = 0;
 	tab = (char**)malloc(sizeof(**tab) * 1000);
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
 		i++;
