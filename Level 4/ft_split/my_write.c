@@ -1,6 +1,4 @@
 #include <stdlib.h>
-# define WD_NUM 1000
-# define WD_LEN 1000
 
 char	**ft_split(char *str)
 {
@@ -11,7 +9,7 @@ char	**ft_split(char *str)
 
 	i = 0;
 	i2 = 0;
-	tab = (char**)malloc(sizeof(**tab) * WD_NUM);
+	tab = (char**)malloc(sizeof(**tab) * 1000);
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
 		i++;
 	while (str[i] != '\0')
@@ -19,7 +17,7 @@ char	**ft_split(char *str)
 		if (str[i] > 32)
 		{
 			i3 = 0;
-			tab[i2] = (char*)malloc(sizeof(char) * WD_LEN);
+			tab[i2] = (char*)malloc(sizeof(char) * 1000);
 			while (str[i] > 32)
 			{
 				tab[i2][i3] = str[i];
