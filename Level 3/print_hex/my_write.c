@@ -3,9 +3,11 @@
 int ft_atoi(char *str) {
     int result = 0;
 
-    while (*str)
+    while (*str) {
         result = result * 10 + *str - '0';
         str++;
+    }
+
     return (result);
 }
 
