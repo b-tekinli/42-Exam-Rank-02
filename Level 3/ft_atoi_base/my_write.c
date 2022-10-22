@@ -8,7 +8,7 @@ int is_valid(char c, int base) {
     char digit[17] = "0123456789abcdef";
     char digit2[17] = "0123456789ABCDEF";
 
-    while (--base)
+    while (base--)
         if (c == digit[base] || c == digit2[base])
             return (1);
     return (0);
