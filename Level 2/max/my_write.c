@@ -8,5 +8,5 @@ int max(int* tab, unsigned int len) {
     if (tab[i] > max)
       max = tab[i];
 
-  return max;
+  return (max);
 }
