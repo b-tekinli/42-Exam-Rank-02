@@ -11,13 +11,13 @@ int main(int ac, char **av) {
         arr[i] = 0;
 
         for (int i = 0; s1[i]; i++)
-            if (!arr[s1[i]]++)
+            if (!arr[(int)s1[i]]++)
                 write(1, &s1[i], 1);
         
         for (int i = 0; s2[i]; i++)
-            if (!arr[s2[i]]++)
+            if (!arr[(int)s2[i]]++)
                 write(1, &s2[i], 1);
     }
     write(1, "\n", 1);
     return (0);
-}
+} 
