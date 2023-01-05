@@ -1,11 +1,12 @@
-int		max(int* tab, unsigned int len) {
-    int max = tab[--len];
+int max(int* tab, unsigned int len) {
+  if (len == 0)
+    return 0;
 
-    if(!tab)
-        return (0);
+  int max = tab[0];
     
-    while(len--)
-        if (tab[len] > max)
-            max = tab[len];
-    return (max);
+  for (int i = 1; i < len; i++)
+    if (tab[i] > max)
+      max = tab[i];
+
+  return max;
 }
